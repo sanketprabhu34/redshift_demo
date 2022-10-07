@@ -8,3 +8,6 @@ sources:
        - name: wt_email_d
        - name: wt_email_individual_bridge
        - name: wt_email_individual_bridge_distinct_alterian
+       - name: wt_individual_d
+       - name: wt_individual_flags_d
+       - name: wt_nielsen_dma_d

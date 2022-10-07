@@ -3,9 +3,7 @@
 
 WITH wt_email_d AS (
 	SELECT 
-		email_auth,
-		email_sk,
-		email_valid
+		*
 	FROM {{ source('hrst','wt_email_d') }}
 
 )

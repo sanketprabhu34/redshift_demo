@@ -1,4 +1,4 @@
-{{ config (materialized='table', alias='wt_email_individual_bridge_distinct_alterian') }}
+{{ config (materialized='table', alias='wt_email_individual_bridge_distinct_alterian11') }}
 
 
 WITH wt_email_individual_bridge AS (
