@@ -26,14 +26,17 @@ wt_email_individual_bridge as(
     INNER JOIN {{source('hrst_stg','source_last_send_alterian')}} slsa
     ON         slsa.source = 'wt_individual_d'
     WHERE      eib.update_dt > slsa.updatedate
+),
+
+combined_result as (
+	    SELECT individual_sk from wt_email_individual_bridge
+	    UNION
+	    select individual_sk from wt_individual_flags_d
+	    UNION
+	    SELECT individual_sk from wt_individual_d
 )
 
-SELECT individual_sk from wt_email_individual_bridge
-UNION
-select individual_sk from wt_individual_flags_d
-UNION
-SELECT individual_sk from wt_individual_d
-
+select * from combined_result
 
 
 

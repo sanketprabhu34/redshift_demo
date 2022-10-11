@@ -2,9 +2,10 @@
 
 WITH update_source_last_send_individual AS (
     SELECT
-    *,
+    source, 
+    source_id,
     CASE
-        WHEN source = 'wt_individual_d' THEN NOW()
+        WHEN source = 'wt_individual_d' THEN getdate()
         ELSE updatedate
     END AS updatedate
 

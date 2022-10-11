@@ -5,26 +5,31 @@ models:
   - name: wt_email_individual_bridge
     description: "A starter dbt model"
     columns:
-      - name: id
+      - name: email_individual_sk
         description: "The primary key for this table"
         tests:
           - unique
-          - not_null
 
   - name: wt_email_d
     description: "A starter dbt model"
     columns:
-      - name: id
+      - name: email_sk
         description: "The primary key for this table"
         tests:
           - unique
-          - not_null
 
   - name: wt_email_individual_bridge_distinct_alterian
     description: "A starter dbt model"
     columns:
-      - name: id
+      - name: email_individual_sk
         description: "The primary key for this table"
         tests:
           - unique
-          - not_null
+        
+  - name: wt_individual_alterian_driver
+    description: "A starter dbt model"
+    columns:
+      - name: individual_sk
+        description: "The primary key for this table"
+        tests:
+          - unique

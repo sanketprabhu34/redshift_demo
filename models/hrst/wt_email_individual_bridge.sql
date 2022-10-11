@@ -3,7 +3,8 @@
 
 WITH wt_email_individual_bridge AS (
 	SELECT 
-		individual_sk,
+		individual_sk as email_individual_sk,
+	        individual_sk,
 		email_sk,
 		update_dt
 	FROM {{ source('hrst','wt_email_individual_bridge') }}

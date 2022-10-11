@@ -1,4 +1,4 @@
-{{ config (materialized='table', alias='wt_email_individual_bridge_distinct_alterian11') }}
+{{ config (materialized='table', alias='wt_email_individual_bridge_distinct_alterian') }}
 
 
 WITH wt_email_individual_bridge AS (
@@ -18,6 +18,7 @@ wt_email_d AS (
 
 wt_email_individual_bridge_distinct_alterian AS (
 	SELECT 
+		ib.individual_sk as email_individual_sk,
 		ib.individual_sk, 
 		ib.email_sk, 
 		ib.update_dt 
